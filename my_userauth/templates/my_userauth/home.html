@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+<html>
+  <head>
+    {% block head %}
+    <h1>List View ...</h1>
+
+    <title>home page</title>
+    {% for profile in profile %}
+    <h4>
+      <a class="article-title" href="">{{ profile.user}}</a>
+    </h4>
+    <h4>{% url 'profile-detail' %} {{ profile.id}}</h4>
+    <h4>{{ profile.date_created | date:"F d, Y"}}</h4>
+    {% endfor %} {% endblock head %}
+  </head>
+  <body></body>
+</html>
